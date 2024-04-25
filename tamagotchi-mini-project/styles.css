@@ -1,8 +1,97 @@
 body{
+    background-color: #dec9d9;
     height: 100vh;
     display: flex; 
     justify-content: center; 
     align-items: center; 
+    flex-direction: column;
+}
+
+.get-name-div{
+    flex-grow: 0.3;
+}
+
+.name-pet{
+    color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    font-size: 35px;
+    margin-bottom: 10px;
+    margin-top: -20px;
+    text-align: center;
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.name-input{
+    border: 0;
+    height: 25px;
+    box-shadow:rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border-width: 0;
+    transition: box-shadow .15s,transform .15s;
+    font-family: "Rowdies", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.name-input:hover{
+    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+.name-input:focus {
+    outline: 0px;
+  }
+
+/* I have gotten this custom button from online using this website https://getcssscan.com/css-buttons-examples */
+.button-30 {
+  align-items: center;
+  appearance: none;
+  background-color: #FCFCFD;
+  border-radius: 4px;
+  border-width: 0;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #36395A;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  height: 25px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 13px;
+  font-family: "Rowdies", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.button-30:focus {
+  box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+.button-30:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.button-30:active {
+  box-shadow: #D6D6E7 0 3px 7px inset;
+  transform: translateY(2px);
 }
 
 .tamagotchi-device {
@@ -13,7 +102,7 @@ body{
     aspect-ratio: 3.5 / 4;
     border-radius: 100% / 125% 125% 80% 80%;
     border: 4px;
-    box-shadow: 0px 0px 5px black;
+    box-shadow: 0px 0px 15px grey;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,16 +110,20 @@ body{
 }
 
 .tamagotchi-name{
-    font-family: "Indie Flower", cursive;
-    font-size: 50px;
+    font-family: "Rowdies", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 45px;
     margin-top: -15px;
-    color: black;
+    color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
 }
 
 .screen{
     display: block;
-    width: 300px;
-    height: 300px;
+    width: 60%;
+    height: 50%;
     background-color: white;
     margin-bottom: 10px;
     margin-top: -20px;
@@ -44,25 +137,103 @@ body{
     padding-bottom: 0;
     margin-bottom: 0;
     border-bottom: 0;
+    margin-top: 20px;
     text-align: center;
+    font-family: "VT323", monospace;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 25px;
+}
+
+.age{
+    margin-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 8px;
+    border-bottom: 0;
+    text-align: center;
+    font-family: "VT323", monospace;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 20px;
 }
 
 .stats{
     padding-bottom: 0;
-    margin-bottom: 0;
+    margin-bottom: 25px;
+    margin-top: 25px;
     border-bottom: 0;
+    text-align: center;
+    font-family: "VT323", monospace;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 20px;
+}
+
+.clouds{
     text-align: center;
 }
 
+.cloud1{
+    margin-right: 10px;
+    margin-left: 20px;
+    margin-bottom: -20px;
+    height: 40px;
+    animation: up-down;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+}
+
+.cloud2{
+    margin-right: 10px;
+    margin-left: 20px;
+    height: 40px;
+    animation: down-up;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+}
+
+.cloud3{
+    margin-right: 10px;
+    margin-left: 20px;
+    margin-bottom: -20px;
+    height: 40px;
+    animation: up-down;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+}
+
+.cloud4{
+    margin-right: 10px;
+    margin-left: 20px;
+    height: 40px;
+    animation: down-up;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+}
+
 .bunny{
+    height: 60px;
+    width: 60px;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 30%;
+    margin-top: 10%;
     margin-bottom: 0;
     padding-bottom: 0;
     border-bottom: 0;
+    animation: walking;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
 
+.stat-screen{
+    position: absolute;
+    width: 315px;
+    bottom: 170px;
 }
 
 hr{
@@ -82,6 +253,12 @@ hr{
     height: 25px;
     width: 25px;
     margin-right: 9px;
+    font-family: "VT323", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    -webkit-text-stroke-width: .5px;
+    -webkit-text-stroke-color: white;
 }
 
 .play-button{
@@ -89,10 +266,72 @@ hr{
     height: 25px;
     width: 25px;
     margin-right: 9px;
+    font-family: "VT323", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    -webkit-text-stroke-width: .5px;
+    -webkit-text-stroke-color: white;
 }
 
 .lights-button{
     border-radius: 50%;
     height: 25px;
     width: 25px;
+    font-family: "VT323", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    -webkit-text-stroke-width: .5px;
+    -webkit-text-stroke-color: white;
+}
+
+/* ---------- Animations -------------- */
+
+@keyframes up-down{
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-20px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+@keyframes down-up{
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(20px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+@keyframes walking {
+    0% {
+        transform: translateX(0) translateY(0) scaleY(1);
+    }
+    20% {
+        transform: translateX(-100px) translateY(-10px) scaleY(0.9);
+    }
+    30% {
+        transform: translateX(-100px) translateY(0) scaleX(-1) scaleY(1);
+    }
+    50% {
+        transform: translateX(0px) translateY(-10px) scaleX(-1) scaleY(0.9);
+    }
+    70% {
+        transform: translateX(100px) translateY(0) scaleX(-1) scaleY(1);
+    }
+    80% {
+        transform: translateX(100px) translateY(-10px) scaleY(0.9);
+    }
+    100% {
+        transform: translateX(0px) translateY(0) scaleY(1);
+    }
 }
