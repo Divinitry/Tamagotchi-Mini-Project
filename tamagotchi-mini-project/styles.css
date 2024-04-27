@@ -8,7 +8,19 @@ body{
 }
 
 .get-name-div{
-    flex-grow: 0.3;
+    flex-grow: 0.2;
+}
+
+#textPopUp{
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 10px;
+    color: white;
+    font-family: "Fira Sans", sans-serif;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    font-size: 30px;
+    font-weight: 500;
 }
 
 .name-pet{
@@ -103,7 +115,7 @@ body{
     border-radius: 100% / 125% 125% 80% 80%;
     border: 4px;
     box-shadow: 0px 0px 15px grey;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -137,7 +149,7 @@ body{
     padding-bottom: 0;
     margin-bottom: 0;
     border-bottom: 0;
-    margin-top: 20px;
+    margin-top: 10px;
     text-align: center;
     font-family: "VT323", monospace;
     font-weight: 200;
@@ -216,8 +228,8 @@ body{
 }
 
 .bunny{
-    height: 60px;
-    width: 60px;
+    height: 20px;
+    width: 20px;
     display: block;
     margin-left: auto;
     margin-right: auto;

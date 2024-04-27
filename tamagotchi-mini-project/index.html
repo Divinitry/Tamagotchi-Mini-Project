@@ -4,26 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rowdies:wght@300;400;700&family=VT323&display=swap" rel="stylesheet">
-    <script src="script.js" defer></script>
     <title>Tamagotchi</title>
 </head>
 
 <body>
     <div class="get-name-div">
-        <form>
+        <form id="theForm">
             <p class="name-pet">Name your pet! </p>
-            <input placeholder="Name" type="text" class="name-input">
+            <input placeholder="Name" type="text" class="name-input" id="name-input">
             <input type="submit" class="button-30">
         </form>
+        <div id="textPopUp" style="display: none;">
+            
+        </div>
     </div>
     <div class="tamagotchi-device">
         <p class="tamagotchi-name">Tamagotchi</p>
         <div class="screen">
-            <p class="name"> Minmin</p>
+            <p class="name" id="name">Name</p>
             <p class="age"> Age: 5</p>
             <hr>
             <div class="clouds">
