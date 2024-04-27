@@ -8,39 +8,32 @@ class Pet{
     }
     petFeed(){
         if(this.hunger > 1){
-            this.hunger++
+            this.hunger--
             // put animation here of it jumping/eating
-        }else if (this.hunger = 1){
-            showTextBox(`Stubborn little ${petNameInfo} refuses to eat!`)
         }
     }
     petSleeping(){
         if(this.sleepiness > 1){
-            this.sleepiness++
+            this.sleepiness--
             // put animation of it sleeping and turn the lights off (make background colour dark)
-        }else if (this.sleepiness = 1){
-            showTextBox(`Stubborn little ${petNameInfo} refuses to sleep!`)
-            // put animation for him refusing to sleep
         }
     }
     petPlay(){
         if(this.boredom > 1){
-            this.boredom++
-        }else if (this.border = 1){
-            showTextBox(`Stubborn little ${petNameInfo} refuses to play`)
+            this.boredom--
         }
     }
     increaseAge(){
         this.age++
         setInterval(130000)
-        // make for loop to make this function run if age is less than 10
+        // set interval
     }
     increaseStats(){
         this.hunger++
         this.sleepiness++
         this.boredom++
         setInterval(40000)
-        // make this an infinite loop
+        // set interval inside of the submit button
     }
     gameOver(){
         if(this.hunger === 10 || this.sleepiness === 10 || this.boredom === 10){
@@ -52,25 +45,35 @@ class Pet{
         }
     }
 }
+//setInterval
+let newPet;
 
 function showTextBox(text){
     const textBox = document.getElementById("textPopUp")
-    textBox.innerHTML = text
+    textBox.innerText = text
     textBox.style.display = "block"
 }   
 
-// getting user information for the name and updating the class with it and name for Tamagotchi
-
 const petNameInfo = document.getElementById("name-input").value
 const changeName = document.getElementById("name")
+const device = document.getElementById("t-device")
+const age = document.getElementById("age")
 
+// getting user information for the name and updating the class with it and name for Tamagotchi
 document.getElementById("theForm").addEventListener("submit", function(event){
     event.preventDefault();
     const nameInfo = document.getElementById("name-input").value
     changeName.innerText = nameInfo
-    const newPet = new Pet(nameInfo)
-    const device = document.getElementsByClassName("tamagotchi-device")
+    newPet = new Pet(nameInfo);
     device.style.display = "flex"
+    age.innerText = newPet.age
 })
+
+document.getElementById("feed-button").addEventListener("click", function(){
+    if (newPet){
+        
+    }
+})
+
 
 

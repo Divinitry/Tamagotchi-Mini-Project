@@ -23,11 +23,11 @@
             
         </div>
     </div>
-    <div class="tamagotchi-device">
+    <div class="tamagotchi-device" id="t-device">
         <p class="tamagotchi-name">Tamagotchi</p>
         <div class="screen">
             <p class="name" id="name">Name</p>
-            <p class="age"> Age: 5</p>
+            <p class="age" id="age"></p>
             <hr>
             <div class="clouds">
             <img class="cloud1" src="pixelclouds.png">
@@ -38,13 +38,13 @@
             <img class="bunny" src="bunnyforgame.png">
             <hr>
             <div class="stat-screen">
-            <p class="stats"> Hunger: 0 Sleep: 0 Boredom: 0</p>
+            <p class="stats"> Hunger: <span id="hunger-number">0</span> Sleep: <span id="sleep-number">0</span> Boredom: <span id="boredom-number">0</span></p>
             </div>
         </div>
         <div class="buttons">
-            <button class="feed-button">F</button>
-            <button class="play-button">P</button>
-            <button class="lights-button">S</button>
+            <button id="feed-button" class="feed-button">F</button>
+            <button id="play-button" class="play-button">P</button>
+            <button id="lights-button" class="lights-button">S</button>
         </div>
     </div>
 
