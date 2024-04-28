@@ -243,7 +243,6 @@ body{
 }
 
 .stat-screen{
-    position: absolute;
     width: 315px;
     bottom: 170px;
 }
