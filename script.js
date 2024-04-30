@@ -29,7 +29,7 @@ class Pet {
                     cloud.src = "pixelclouds.png"
                 });
                 this.buttonsOn()
-            }, 3000)
+            }, 2200)
         }
     }
     petSleeping() {
@@ -54,7 +54,7 @@ class Pet {
                     cloud.src = "pixelclouds.png"
                 });
                 this.buttonsOn()
-            }, 3000);
+            }, 2200);
         }
     }
     petPlay() {
@@ -79,7 +79,7 @@ class Pet {
                     cloud.src = "pixelclouds.png"
                 });
                 this.buttonsOn()
-            }, 3000)
+            }, 2200)
         }
     }
     increaseAge() {
@@ -93,7 +93,7 @@ class Pet {
                 bunnyElement.style.height = (currentHeight + 10) + "px";
             }
             this.oldAgeDead()
-        }, 30000);
+        }, 20000);
     }
 
     increaseStats() {
@@ -115,13 +115,14 @@ class Pet {
     }
     gameOver() {
         if (this.hunger === 10 || this.sleepiness === 10 || this.boredom === 10) {
-            showTextBox("Game over, you are a bad owner!")
+            showTextBox(`Bad owner ALERT! ${this.name} died!`)
+            document.getElementById("textPopUp").style.animation = "textPopOut 0.5s ease-in-out infinite";
             setTimeout(() => location.reload(), 4000)
         } 
     }
     oldAgeDead() {
         if (this.age === 15){
-            showTextBox("Your pet has died of old age...")
+            showTextBox(`${this.name} has died of old age...`)
             setTimeout(() => location.reload(), 4000)
         }
     }
@@ -152,6 +153,10 @@ function showTextBox(text) {
     textBox.innerText = text
     textBox.style.display = "block"
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector('.get-name-div').classList.add('visible');
+});
 
 const petNameInfo = document.getElementById("name-input").value
 const changeName = document.getElementById("name")
