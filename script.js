@@ -18,6 +18,7 @@ class Pet {
             document.querySelectorAll('[class^="cloud"]').forEach((cloud) => {
                 cloud.src = "carrot.png"
             });
+            this.buttonsOff()
 
             setTimeout(() => {
                 bunnyElement.src = "bunnyforgame.png"
@@ -27,6 +28,7 @@ class Pet {
                 document.querySelectorAll('[class^="cloud"]').forEach((cloud) => {
                     cloud.src = "pixelclouds.png"
                 });
+                this.buttonsOn()
             }, 3000)
         }
     }
@@ -42,6 +44,7 @@ class Pet {
             document.querySelectorAll('[class^="cloud"]').forEach((cloud) => {
                 cloud.src = "starimages.png"
             });
+            this.buttonsOff()
 
             setTimeout(() => {
                 document.getElementById("sleepbackground").style.display = "none";
@@ -50,6 +53,7 @@ class Pet {
                 document.querySelectorAll('[class^="cloud"]').forEach((cloud) => {
                     cloud.src = "pixelclouds.png"
                 });
+                this.buttonsOn()
             }, 3000);
         }
     }
@@ -64,6 +68,7 @@ class Pet {
             document.querySelectorAll('[class^="cloud"]').forEach((cloud) => {
                 cloud.src = "discoball.png"
             })
+            this.buttonsOff()
 
             setTimeout(() => {
                 bunnyElement.src = "bunnyforgame.png"
@@ -73,6 +78,7 @@ class Pet {
                 document.querySelectorAll('[class^="cloud"]').forEach((cloud) => {
                     cloud.src = "pixelclouds.png"
                 });
+                this.buttonsOn()
             }, 3000)
         }
     }
@@ -119,11 +125,27 @@ class Pet {
             setTimeout(() => location.reload(), 4000)
         }
     }
+    buttonsOff(){
+        feedButton.disabled = true;
+        playButton.disabled = true;
+        lightsButton.disabled = true;
+    }
+    buttonsOn(){
+        feedButton.disabled = false;
+        playButton.disabled = false;
+        lightsButton.disabled = false;
+    }
 }
 // global variable declaration
 let newPet;
+
 bunnyElement = document.getElementById("bunny")
+
 sleepText = document.getElementById("sleepingText")
+
+feedButton = document.getElementById("feed-button")
+playButton = document.getElementById("play-button")
+lightsButton = document.getElementById("lights-button")
 
 function showTextBox(text) {
     const textBox = document.getElementById("textPopUp")
