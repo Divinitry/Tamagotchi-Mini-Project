@@ -25,10 +25,10 @@ body{
 }
 
 .name-pet{
-    color: black;
+    color: white;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: white;
-    font-size: 35px;
+    font-size: 50px;
     margin-bottom: 10px;
     margin-top: -20px;
     text-align: center;
@@ -40,14 +40,18 @@ body{
 .name-input{
     border: 0;
     height: 25px;
+    width: 78%;
     box-shadow:rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
     box-sizing: border-box;
     border-radius: 4px;
     border-width: 0;
+    text-align:center;
     transition: box-shadow .15s,transform .15s;
     font-family: "Rowdies", sans-serif;
     font-weight: 100;
     font-style: normal;
+    justify-content: center;
+    float:left;
 }
 
 .name-input:hover{
@@ -91,6 +95,7 @@ body{
   font-family: "Rowdies", sans-serif;
   font-weight: 100;
   font-style: normal;
+  float: right;
 }
 
 .button-30:focus {
@@ -123,14 +128,17 @@ body{
 }
 
 .tamagotchi-name{
-    font-family: "Rowdies", sans-serif;
-    font-weight: 700;
+    font-family: "Tamagotchi-font";
+    font-weight: 100;
     font-style: normal;
-    font-size: 45px;
+    font-size: 40px;
     margin-top: -15px;
     color: rgb(255, 0, 0);
-    text-shadow: 2px 1px 5px rgb(0, 0, 0);
-}
+    letter-spacing: 0px;
+    text-shadow: 1px 1px 3px black;
+    /* -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white; */
+} 
 
 .screen{
     display: block;
@@ -451,4 +459,9 @@ hr{
     75% {
         transform: translateX(2px);
     }
+}
+
+@font-face {
+    font-family: Tamagotchi-font;
+    src: url(my_chemical_romance.ttf);
 }
