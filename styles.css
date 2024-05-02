@@ -10,25 +10,18 @@ body{
 
 .get-name-div{
     flex-grow: 0.2;
-    opacity: 0;
-    transition: opacity 1s, transform 1s;
-}
-
-.get-name-div.visible {
-    animation: fadeInUp 2s ease forwards;
 }
 
 #textPopUp{
     text-align: center;
-    margin-bottom: 15px;
-    margin-top: 20px;
+    margin-bottom: 0;
+    margin-top: 10px;
     color: white;
     font-family: "Fira Sans", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 50px;
-    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
+    font-size: 30px;
+    font-weight: 500;
 }
 
 .name-pet{
@@ -119,59 +112,6 @@ body{
   transform: translateY(2px);
 }
 
-.hr1{
-    width: 129px;
-    color: grey;
-    position: absolute;
-    top: 350px;
-    right: 2px;
-    rotate: 10deg;
-    border-width: 1.7px;
-    border-style: solid;
-    border-color: rgb(128, 99, 12);
-    opacity: 0.3;
-}
-
-.hr1-highlight{
-    width: 129px;
-    color: white;
-    position: absolute;
-    top: 354px;
-    right: 2px;
-    rotate: 10deg;
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgb(250,203,67,1);
-    opacity: 0.3;
-    border-width: 1px;
-}
-
-.hr2{
-    width: 129px;
-    color: grey;
-    position: absolute;
-    top: 350px;
-    left: 2px;
-    rotate: -10deg;
-    border-width: 1.7px;
-    border-style: solid;
-    border-color: rgb(128, 99, 12);
-    opacity: 0.3;
-}
-
-.hr2-highlight{
-    width: 129px;
-    color: white;
-    position: absolute;
-    top: 354px;
-    left: 2px;
-    rotate: -10deg;
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgb(250,203,67,1);
-    opacity: 0.3;
-}
-
 .tamagotchi-device {
     background: rgb(242,128,69);
     background: radial-gradient(circle, rgba(242,128,69,1) 37%, rgba(250,203,67,1) 100%);
@@ -180,14 +120,11 @@ body{
     aspect-ratio: 3.5 / 4;
     border-radius: 100% / 125% 125% 80% 80%;
     border: 4px;
-    box-shadow: inset 4px 2px 20px rgb(248, 180, 143), inset -5px -5px 50px rgb(136, 4, 4), 3px 2px 20px rgb(96, 70, 56);
+    box-shadow: inset 4px 2px 20px rgb(248, 180, 143), inset -5px -5px 10px rgb(136, 4, 4), 3px 2px 20px rgb(96, 70, 56);
     display: none;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    opacity: 0;
-    animation: fadeIn 1.3s ease forwards;
-    position: relative;
 }
 
 .tamagotchi-name{
@@ -199,6 +136,8 @@ body{
     color: rgb(255, 0, 0);
     letter-spacing: 0px;
     text-shadow: 1px 1px 3px black;
+    /* -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white; */
 } 
 
 .screen{
@@ -347,7 +286,7 @@ body{
     margin-top: auto;
 }
 
-.hr{
+hr{
     margin-top: 0;
     border-style: dashed;
     border-color: grey;
@@ -522,42 +461,7 @@ body{
     }
 }
 
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
 @font-face {
     font-family: Tamagotchi-font;
     src: url(my_chemical_romance.ttf);
-}
-
-@keyframes textPopOut {
-    0% {
-        transform: scale(1);
-        text-shadow: 0 0 0 rgba(0, 0, 0, 0);
-    }
-    50% {
-        transform: scale(1.3);
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    }
-    100% {
-        transform: scale(1);
-        text-shadow: 0 0 0 rgba(0, 0, 0, 0);
-    }
 }
